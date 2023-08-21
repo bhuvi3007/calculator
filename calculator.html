@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calculator{
+            margin-top: 150px;
+            margin-left: 500px;
+            background-image: url(/asset.html/calculator.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        input[type="number"],input[type="number"],input[type="number"]{
+            border-radius: 50px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body class="calculator">
+    <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">CALCULATOR</h1>
+    <script>
+        function add() {
+            let a=Number(document.getElementById('n1').value);
+            let b=Number(document.getElementById('n2').value);
+            let ans=a+b;
+            document.getElementById('ans').value=ans;
+        }
+        function sub() {
+            let a=Number(document.getElementById('n1').value);
+            let b=Number(document.getElementById('n2').value);
+            let ans=a-b;
+            document.getElementById('ans').value=ans;
+        }
+        function multiply() {
+            let a=Number(document.getElementById('n1').value);
+            let b=Number(document.getElementById('n2').value);
+            let ans=a*b;
+            document.getElementById('ans').value=ans;
+        }
+        function divide() {
+            let a=Number(document.getElementById('n1').value);
+            let b=Number(document.getElementById('n2').value);
+            let ans=a/b;
+            document.getElementById('ans').value=ans;
+        }
+    </script>
+    <input type="number" placeholder="Number 1" id="n1" style="border-radius: 50px;"> <br> <br>
+    <input type="number" placeholder="Number 2" id="n2" style="border-radius: 50px;"> <br> <br>
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Sub</button>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button> <br> <br>
+    <input type="number" placeholder="Answer" id="ans" style="border-radius: 50px;">
+</body>
+</html>
